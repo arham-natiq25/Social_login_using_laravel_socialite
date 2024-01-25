@@ -4,6 +4,7 @@
 namespace App\Factories\Social;
 
 use App\Actions\Social\CreateGithubUser;
+use App\Actions\Social\CreateGoogleUser;
 use App\Actions\Social\CreateXUser;
 use Exception;
 
@@ -15,6 +16,7 @@ class CreateUserFactory {
     return   match($service){
         'twitter'=> new CreateXUser(),
         'github'=>new CreateGithubUser(),
+        'google'=>new CreateGoogleUser(),
         default => throw new Exception('Invalid'),
     };
  }
