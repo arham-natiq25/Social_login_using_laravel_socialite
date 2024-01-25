@@ -3,6 +3,7 @@
 
 namespace App\Factories\Social;
 
+use App\Actions\Social\CreateFacebookUser;
 use App\Actions\Social\CreateGithubUser;
 use App\Actions\Social\CreateGoogleUser;
 use App\Actions\Social\CreateXUser;
@@ -17,6 +18,7 @@ class CreateUserFactory {
         'twitter'=> new CreateXUser(),
         'github'=>new CreateGithubUser(),
         'google'=>new CreateGoogleUser(),
+        'facebook'=> new CreateFacebookUser(),
         default => throw new Exception('Invalid'),
     };
  }
